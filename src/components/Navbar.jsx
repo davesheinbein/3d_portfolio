@@ -64,7 +64,7 @@ const Navbar = () => {
 								active === nav.title
 									? 'text-white'
 									: 'text-secondary'
-							} hover:text-white text-[18px] font-medium cursor-pointer`}
+							} hover:text-white text-[18px] font-medium font-['Pacifico'] cursor-pointer`}
 							onClick={() => setActive(nav.title)}
 						>
 							<a href={`#${nav.id}`}>{nav.title}</a>
@@ -76,7 +76,7 @@ const Navbar = () => {
 					<img
 						src={toggle ? close : menu}
 						alt='menu'
-						className='w-[28px] h-[28px] object-contain'
+						className='w-[28px] h-[28px] object-contain cursor-pointer'
 						onClick={() => setToggle(!toggle)}
 					/>
 
