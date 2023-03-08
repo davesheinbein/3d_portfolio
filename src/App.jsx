@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import {
 	About,
@@ -7,6 +6,7 @@ import {
 	Feedbacks,
 	Hero,
 	Navbar,
+	Skills,
 	Works,
 	StarsCanvas,
 	Tech,
@@ -24,6 +24,7 @@ function App() {
 			<Experience />
 			<Tech />
 			<Works />
+			{/* <Skills /> */}
 			<Feedbacks />
 			<div className='relative z-0'>
 				<Contact />

@@ -17,6 +17,10 @@
 			samesite="None"
 			secure
 		/>
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/tippy.js@5/animations/scale.css"
+		/>
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0"
@@ -61,6 +65,22 @@
 	</head>
 	<body>
 		<div id="root"></div>
-		<script type="module" src="/src/main.jsx"></script>
+		<script
+			defer="defer"
+			type="module"
+			src="/src/main.jsx"
+		></script>
+		<script
+			defer="defer"
+			src="https://unpkg.com/popper.js@1"
+		></script>
+		<script
+			defer="defer"
+			src="https://unpkg.com/tippy.js@5"
+		></script>
+		<script
+			defer="defer"
+			src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"
+		></script>
 	</body>
 </html>
