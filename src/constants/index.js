@@ -1,7 +1,4 @@
 import {
-	mobile,
-	backend,
-	creator,
 	web,
 	javascript,
 	typescript,
@@ -15,10 +12,17 @@ import {
 	git,
 	figma,
 	docker,
-	starbucks,
-	tesla,
-	shopify,
 	threejs,
+	internetbrands,
+	dna,
+	superworld,
+	frontend,
+	backendDev,
+	react,
+	angular,
+	devops,
+	webDesign,
+	qa,
 } from '../assets';
 
 export const navLinks = [
@@ -42,20 +46,36 @@ export const navLinks = [
 
 const services = [
 	{
-		title: 'Web Developer',
+		title: 'Full-Stack Web Developer',
 		icon: web,
 	},
 	{
-		title: 'React Developer',
-		icon: mobile,
-	},
-	{
 		title: 'Frontend Developer',
-		icon: backend,
+		icon: frontend,
 	},
 	{
 		title: 'Backend Developer',
-		icon: creator,
+		icon: backendDev,
+	},
+	{
+		title: 'React Developer',
+		icon: react,
+	},
+	{
+		title: 'Angular Developer',
+		icon: angular,
+	},
+	{
+		title: 'DevOps Engineer',
+		icon: devops,
+	},
+	{
+		title: 'Quality Assurance',
+		icon: qa,
+	},
+	{
+		title: 'Web Design',
+		icon: webDesign,
 	},
 ];
 
@@ -118,7 +138,7 @@ const experiences = [
 	{
 		title: 'Associate Frontend Developer',
 		company_name: 'Internet Brands',
-		icon: starbucks,
+		icon: internetbrands,
 		iconBg: '#383E56',
 		date: 'January 2021 - Present',
 		points: [
@@ -138,11 +158,13 @@ const experiences = [
 			'Develops and maintains internal documentation and guidelines for web applications to ensure consistency across all projects.',
 			'Proficient in utilizing debugging tools such as Chrome DevTools to identify and resolve performance issues and improve website load times, as well as troubleshoot issues on local, staging, and master branches. Example: state not being passed properly or child container text overflowing into parent container.',
 		],
+		linkedinUrl:
+			'https://www.linkedin.com/company/internet-brands/',
 	},
 	{
 		title: 'Frontend Web Developer',
 		company_name: 'SuperWorld',
-		icon: tesla,
+		icon: superworld,
 		iconBg: '#E6DEDD',
 		date: 'September 2020 - January 2021',
 		points: [
@@ -152,11 +174,13 @@ const experiences = [
 			'Used object-oriented design principles and test-driven development to build full-stack web applications.',
 			'Expanded my knowledge in the growing field of crypto-based projects with mentorship from specialists.',
 		],
+		linkedinUrl:
+			'https://www.linkedin.com/company/superworldapp/',
 	},
 	{
 		title: 'Digital Niche Agency (DNA)',
 		company_name: 'Digital Marketing Specialist',
-		icon: shopify,
+		icon: dna,
 		iconBg: '#383E56',
 		date: 'Nov 2018 - May 2020',
 		points: [
@@ -170,35 +194,39 @@ const experiences = [
 			'Generated and developed promotional ideas for the brands together with the marketing team and designed brand style guides, graphic assets, images, the copyright for websites, and other content-related projects for brand development and positioning to targeted public segments.',
 			'Provided recommendations regarding how internal processes could be optimized to accommodate new product offerings.',
 		],
+		linkedinUrl:
+			'https://www.linkedin.com/company/digital-niche-agency/',
 	},
 ];
 
 const testimonials = [
 	{
 		testimonial:
-			'I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.',
-		name: 'Sara Lee',
-		designation: 'CFO',
-		company: 'Acme Co',
+			'Good Frontend Engineer and good at JavaScript and React',
+		name: 'Jeremy Guan',
+		designation: 'Frontend Developer',
+		company: 'Internet Brands',
 		image:
-			'https://randomuser.me/api/portraits/women/4.jpg',
+			'https://media.licdn.com/dms/image/C5603AQFgkL6RZl1ouQ/profile-displayphoto-shrink_800_800/0/1579338556183?e=1683763200&v=beta&t=8dZFvkOQVNDfZR47ef0jTsjt_UnGtilqinJknshlPHw',
 	},
 	{
 		testimonial:
-			"I've never met a web developer who truly cares about their clients' success like Rick does.",
-		name: 'Chris Brown',
-		designation: 'COO',
-		company: 'DEF Corp',
-		image: 'https://randomuser.me/api/portraits/men/5.jpg',
+			'David was an extremely thorough, talented and hard-working Software Engineering student. He will make an exceptional addition to any company!',
+		name: 'Jim Clark',
+		designation:
+			'Senior Lead Software Engineering Immersive (SEI) Instructor',
+		company: 'General Assembly',
+		image:
+			'https://media.licdn.com/dms/image/C4E03AQF1-tz0KC6ImQ/profile-displayphoto-shrink_800_800/0/1517440579749?e=1683763200&v=beta&t=m9CP5k2mIv2taZcLWS16_dGBoVFFleYGsQxlmcPpZBs',
 	},
 	{
 		testimonial:
-			"After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-		name: 'Lisa Wang',
-		designation: 'CTO',
-		company: '456 Enterprises',
+			'David was an absolute pleasure to work with throughout the planning and execution of the app we worked on. He has a very keen eye for creativity and design and played a crucial role in developing our overall look for our application and really brought it together. I continue to look to him for guidance on some projects I currently work on as he continues to elevate his skills. ',
+		name: 'Jonathan Lane',
+		designation: 'Software Developer',
+		company: 'Journal Technologies',
 		image:
-			'https://randomuser.me/api/portraits/women/6.jpg',
+			'https://media.licdn.com/dms/image/D5635AQGzIwGh48ewtA/profile-framedphoto-shrink_800_800/0/1634205356390?e=1678874400&v=beta&t=jMbt7nzKwZP1BZs7skv6JPQiJ1UScShB7kLshoYejbY',
 	},
 ];
 
@@ -533,7 +561,7 @@ const projects = [
 	},
 ];
 
-const skills = [
+const skillsData = [
 	{
 		id: 1,
 		text: 'Animations',
@@ -1062,7 +1090,7 @@ const skills = [
 ];
 
 export {
-	skills,
+	skillsData,
 	services,
 	technologies,
 	experiences,

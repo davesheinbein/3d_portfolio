@@ -18,7 +18,7 @@ const Computers = ({ isMobile }) => {
 
 	return (
 		<mesh>
-			{/* <hemisphereLight
+			<hemisphereLight
 				intensity={0.15}
 				groundColor='black'
 			/>
@@ -29,19 +29,8 @@ const Computers = ({ isMobile }) => {
 				intensity={1}
 				castShadow
 				shadow-mapSize={1024}
-			/> */}
-			<primitive
-				object={
-					new THREE.HemisphereLight(0xffffff, 0x444444)
-				}
 			/>
-			<primitive
-				object={new THREE.SpotLight(0xffffff, 1)}
-			/>
-			<primitive
-				object={new THREE.PointLight(0xffffff, 1)}
-			/>
-			{/* <pointLight intensity={1} /> */}
+			<pointLight intensity={1} />
 			<primitive
 				object={computer.scene}
 				scale={isMobile ? 0.7 : 0.75}

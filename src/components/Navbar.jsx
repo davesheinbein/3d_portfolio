@@ -47,7 +47,7 @@ const Navbar = () => {
 						alt='logo'
 						className='w-9 h-9 object-contain'
 					/>
-					<p className="text-white text-[18px] font-bold cursor-pointer flex font-['Pacifico']">
+					<p className="text-white text-[18px] font-bold cursor-pointer flex font-['Pacifico'] select-none">
 						David Sheinbein &nbsp;
 						<span className="sm:block hidden font-['Pacifico']">
 							{' '}

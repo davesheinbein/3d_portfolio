@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sphere
+* source:	https://sketchfab.com/3d-models/sphere-16b011664e274c08b0687a9117b44629
+* author:	Warkarma (https://sketchfab.com/warkarma)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sphere" (https://sketchfab.com/3d-models/sphere-16b011664e274c08b0687a9117b44629) by Warkarma (https://sketchfab.com/warkarma) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'; 
+import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { ComputersCanvas } from './canvas';
 
@@ -25,10 +25,12 @@ const Hero = () => {
 					<p
 						className={`${styles.heroSubText} mt-2 text-white-100`}
 					>
-						As a software engineer, I specialize in creating
-						sleek and adaptable user interfaces for both web
-						and mobile applications, utilizing a diverse
-						range of technology stacks.
+						As a full-stack developer, I create sleek and
+						adaptable user interfaces for web and mobile
+						applications, using a diverse range of
+						technologies. My solutions are robust, scalable,
+						and tailored to meet the needs of businesses and
+						users alike.
 					</p>
 					<p className='mt-2 text-white-100'>
 						Schedule a{' '}
