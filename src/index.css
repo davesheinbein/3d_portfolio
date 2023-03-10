@@ -20,7 +20,7 @@
 }
 
 .black-gradient {
-	background: #000000; /* fallback for old browsers */
+	background: #434343; /* fallback for old browsers */
 	background: -webkit-linear-gradient(
 		to right,
 		#434343,
@@ -33,17 +33,31 @@
 	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.blue-gradient {
+	background: #2f80ed;
+	background: linear-gradient(
+		-90deg,
+		#2f80ed 0%,
+		rgba(86, 204, 242, 0) 100%
+	);
+	background: -webkit-linear-gradient(
+		-90deg,
+		#2f80ed 0%,
+		rgba(86, 204, 242, 0) 100%
+	);
+}
+
 .violet-gradient {
 	background: #804dee;
 	background: linear-gradient(
 		-90deg,
 		#804dee 0%,
-		rgba(60, 51, 80, 0) 100%
+		#3c334f 100%
 	);
 	background: -webkit-linear-gradient(
 		-90deg,
 		#804dee 0%,
-		rgba(60, 51, 80, 0) 100%
+		#3c334f 100%
 	);
 }
 
@@ -58,6 +72,62 @@
 		-90.13deg,
 		#00cea8 1.9%,
 		#bf61ff 97.5%
+	);
+}
+
+.orange-gradient {
+	background: #ff8008;
+	background: linear-gradient(
+		90deg,
+		#ff8008 0%,
+		#ffc837 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		#ff8008 0%,
+		#ffc837 100%
+	);
+}
+
+.purple-gradient {
+	background: #6c63ff;
+	background: linear-gradient(
+		90deg,
+		#6c63ff 0%,
+		#eaeaea 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		#6c63ff 0%,
+		#eaeaea 100%
+	);
+}
+
+.yellow-gradient {
+	background: #ffd300;
+	background: linear-gradient(
+		90deg,
+		#ffd300 0%,
+		#ffb800 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		#ffd300 0%,
+		#ffb800 100%
+	);
+}
+
+.red-gradient {
+	background: #ff3b3f;
+	background: linear-gradient(
+		90deg,
+		#ff3b3f 0%,
+		#c20000 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		#ff3b3f 0%,
+		#c20000 100%
 	);
 }
 
@@ -220,4 +290,35 @@
 			-2.6em 0em 0 0em rgba(255, 255, 255, 0.7),
 			-1.8em -1.8em 0 0em #ffffff;
 	}
+}
+
+text {
+	pointer-events: all;
+	cursor: pointer;
+}
+
+svg {
+	width: 100%;
+	height: 100%;
+	min-height: 400px;
+}
+
+g {
+	position: relative;
+}
+
+.tooltip {
+	position: absolute;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	z-index: 999;
+	background-color: white;
+	color: #6c63ff;
+	border: 1px solid #919191;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 12px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }

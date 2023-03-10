@@ -1,27 +1,39 @@
-import React, { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
+import React, { Suspense, useState } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
 import {
 	Decal,
 	Float,
 	OrbitControls,
 	Preload,
 	useTexture,
-	useGLTF,
 } from '@react-three/drei';
 
 import CanvasLoader from '../Loader';
 
-const Ball = (props) => {
-	const [decal] = useTexture([props.imgUrl]);
+const Ball = ({ imgUrl, delay }) => {
+	const [decal] = useTexture([imgUrl]);
+
+	// State variable to keep track of rotation angle
+	const [rotationAngle, setRotationAngle] = useState(0);
+
+	// Update rotation angle on every frame
+	useFrame(({ clock }) => {
+		setRotationAngle(
+			Math.sin(clock.getElapsedTime() * 0.5 + delay) *
+				Math.PI *
+				0.5
+		);
+	});
 
 	return (
 		<Float
-			speed={1.75}
-			rotationIntensity={1}
+			speed={8}
+			rotationIntensity={1.5}
 			floatIntensity={2}
+			rotation={[0, rotationAngle, 0]} // Set rotation angle on y-axis
 		>
-			<ambientLight intensity={0.25} />
-			<directionalLight position={[0, 0, 0.05]} />
+			<ambientLight intensity={0.5} />
+			<directionalLight position={[0, 0, 0.15]} />
 			<mesh castShadow receiveShadow scale={2.75}>
 				<icosahedronGeometry args={[1, 1]} />
 				<meshStandardMaterial
@@ -29,6 +41,8 @@ const Ball = (props) => {
 					polygonOffset
 					polygonOffsetFactor={-5}
 					flatShading
+					roughness={5}
+					metalness={5}
 				/>
 				<Decal
 					position={[0, 0, 1]}
@@ -42,7 +56,7 @@ const Ball = (props) => {
 	);
 };
 
-const BallCanvas = ({ icon }) => {
+const BallCanvas = ({ icon: imgUrl, index }) => {
 	return (
 		<Canvas
 			frameloop='demand'
@@ -51,7 +65,11 @@ const BallCanvas = ({ icon }) => {
 		>
 			<Suspense fallback={<CanvasLoader />}>
 				<OrbitControls enableZoom={false} />
-				<Ball imgUrl={icon} />
+				<Ball
+					key={index}
+					imgUrl={imgUrl}
+					delay={index * 0.1}
+				/>
 			</Suspense>
 
 			<Preload all />

@@ -17,7 +17,7 @@ const ServiceCard = ({ index, title, icon }) => {
 					index * 0.5,
 					0.75
 				)}
-				className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
+				className='w-full orange-gradient p-[1px] rounded-[20px] shadow-card'
 			>
 				<div
 					options={{
