@@ -77,6 +77,7 @@ const ComputersCanvas = () => {
 			dpr={[1, 2]}
 			camera={{ position: [20, 3, 5], fov: 25 }}
 			gl={{ preserveDrawingBuffer: true }}
+			className='w-full h-full cursor-ew-resize'
 		>
 			<Suspense fallback={<CanvasLoader />}>
 				<OrbitControls

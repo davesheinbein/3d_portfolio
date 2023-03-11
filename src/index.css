@@ -292,11 +292,6 @@
 	}
 }
 
-text {
-	pointer-events: all;
-	cursor: pointer;
-}
-
 svg {
 	width: 100%;
 	height: 100%;
@@ -305,6 +300,12 @@ svg {
 
 g {
 	position: relative;
+}
+
+text {
+	user-select: none;
+	pointer-events: all;
+	cursor: pointer;
 }
 
 .tooltip {
@@ -321,4 +322,23 @@ g {
 	padding: 10px;
 	font-size: 12px;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	max-width: 300px;
+}
+
+.tooltip__container-title {
+	font-family: 'Impact', 'Arial Narrow Bold', sans-serif;
+	font-weight: 900;
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+
+.tooltip__container-subtitle {
+	font-weight: 700;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+.tooltip__container-text {
+	font-size: 12px;
+	margin-bottom: 5px;
 }

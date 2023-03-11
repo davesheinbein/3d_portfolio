@@ -1,17 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import {
-	// About,
-	// Contact,
-	// Experience,
-	// Feedbacks,
-	// Hero,
-	// Navbar,
-	// WordCloud,
-	// Works,
-	StarsCanvas,
-	// Tech,
-} from './components';
+import { StarsCanvas } from './components';
 import CanvasLoader from './components/Loader';
 
 const LazyNavbar = lazy(() =>

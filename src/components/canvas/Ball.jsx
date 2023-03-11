@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from 'react';
+import React, { Suspense, useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import {
 	Decal,
@@ -6,12 +6,21 @@ import {
 	OrbitControls,
 	Preload,
 	useTexture,
+	useGLTF,
 } from '@react-three/drei';
 
 import CanvasLoader from '../Loader';
 
+const SPHERE_GTLF_PATH =
+	'/sphere-mirror-4k-materialtest/scene.gltf';
+
 const Ball = ({ imgUrl, delay }) => {
 	const [decal] = useTexture([imgUrl]);
+
+	const { nodes } = useGLTF(SPHERE_GTLF_PATH);
+
+	const material =
+		nodes.sanjiaodisikeqiu.children[0].material;
 
 	// State variable to keep track of rotation angle
 	const [rotationAngle, setRotationAngle] = useState(0);
@@ -28,7 +37,7 @@ const Ball = ({ imgUrl, delay }) => {
 	return (
 		<Float
 			speed={8}
-			rotationIntensity={1.5}
+			rotationIntensity={2.5}
 			floatIntensity={2}
 			rotation={[0, rotationAngle, 0]} // Set rotation angle on y-axis
 		>
@@ -37,12 +46,12 @@ const Ball = ({ imgUrl, delay }) => {
 			<mesh castShadow receiveShadow scale={2.75}>
 				<icosahedronGeometry args={[1, 1]} />
 				<meshStandardMaterial
-					color='#1d1836'
+					color='#56ccf2'
 					polygonOffset
 					polygonOffsetFactor={-5}
 					flatShading
-					roughness={5}
-					metalness={5}
+					metalness={material.metalness}
+					roughness={material.roughness}
 				/>
 				<Decal
 					position={[0, 0, 1]}
@@ -56,18 +65,20 @@ const Ball = ({ imgUrl, delay }) => {
 	);
 };
 
-const BallCanvas = ({ icon: imgUrl, index }) => {
+const BallCanvas = ({ icon: imgUrl, index, name }) => {
 	return (
 		<Canvas
 			frameloop='demand'
 			dpr={[1, 2]}
 			gl={{ preserveDrawingBuffer: true }}
+			title={name}
 		>
 			<Suspense fallback={<CanvasLoader />}>
 				<OrbitControls enableZoom={false} />
 				<Ball
 					key={index}
 					imgUrl={imgUrl}
+					name={name}
 					delay={index * 0.1}
 				/>
 			</Suspense>
