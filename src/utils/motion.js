@@ -1,5 +1,5 @@
 export const textVariant = (delay) => {
-	console.log('🚀 ~ delay:', delay);
+	// console.log('🚀 ~ delay:', delay);
 	return {
 		hidden: {
 			y: -50,
@@ -23,10 +23,10 @@ export const fadeIn = (
 	delay,
 	duration
 ) => {
-	console.log('🚀 ~ direction:', direction);
-	console.log('🚀 ~ type:', type);
-	console.log('🚀 ~ delay:', delay);
-	console.log('🚀 ~ duration:', duration);
+	// console.log('🚀 ~ direction:', direction);
+	// console.log('🚀 ~ type:', type);
+	// console.log('🚀 ~ delay:', delay);
+	// console.log('🚀 ~ duration:', duration);
 	return {
 		hidden: {
 			x:
