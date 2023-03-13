@@ -14,9 +14,10 @@ import { fadeIn, textVariant } from '../utils/motion';
 import CanvasLoader from './Loader';
 import { debounce } from 'lodash';
 import { SectionWrapper } from '../hoc';
+import { AnimatedCanvas } from './canvas';
 
 // Define a React component for the WordCloud
-const WordCloud = () => {
+const WordCloud = ({ isMobile }) => {
 	// add skillsData to state
 	const [data, setData] = useState(skillsData);
 	// console.log('🚀 ~ data:', data);
@@ -336,8 +337,20 @@ const WordCloud = () => {
 	return (
 		<motion.div
 			variants={fadeIn('left', 'spring', 1, 0.75)}
+			className={`relative w-full h-96 mx-auto`}
 		>
 			<Suspense fallback={<CanvasLoader />}>
+				<motion.div className='absolute top-0 left-0 w-full sm:h-96 h-60'>
+					<AnimatedCanvas
+						isMobile={isMobile}
+						gltfPath={'./fish/scene.gltf'}
+						cameraPosition={[15, 20, 0]}
+						cameraFov={10}
+						gltfObjectPosition={[0, -0.75, 0]}
+						gltfObjectRotation={[-0.1, 2.2, 0.1]}
+						gltfObjectScale={[1, 1, 1]}
+					/>
+				</motion.div>
 				<motion.div variants={textVariant()}>
 					<svg
 						ref={svgRef}

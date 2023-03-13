@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
-import { ComputersCanvas } from './canvas';
+import { AnimatedCanvas } from './canvas';
 
 const Hero = ({ isMobile }) => {
 	return (
@@ -44,7 +44,7 @@ const Hero = ({ isMobile }) => {
 				</div>
 			</div>
 
-			<ComputersCanvas
+			<AnimatedCanvas
 				isMobile={isMobile}
 				gltfPath={'./desktop_pc/scene.gltf'}
 				cameraPosition={[20, 3, 5]}
