@@ -131,6 +131,55 @@
 	);
 }
 
+.violet-text-gradient {
+	background: #804dee; /* fallback for old browsers */
+	background: linear-gradient(
+		-90deg,
+		#804dee 0%,
+		#3c334f 100%
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: -webkit-linear-gradient(
+		-90deg,
+		#804dee 0%,
+		#3c334f 100%
+	);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.yellow-text-gradient {
+	background: #ffd300; /* fallback for old browsers */
+	background: linear-gradient(
+		90deg,
+		#ffd300 0%,
+		#ffb800 100%
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: -webkit-linear-gradient(
+		90deg,
+		#ffd300 0%,
+		#ffb800 100%
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.red-text-gradient {
+	background: #ff3b3f; /* fallback for old browsers */
+	background: linear-gradient(
+		90deg,
+		#ff3b3f 0%,
+		#c20000 100%
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: -webkit-linear-gradient(
+		90deg,
+		#ff3b3f 0%,
+		#c20000 100%
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
 .orange-text-gradient {
 	background: #f12711; /* fallback for old browsers */
 	background: -webkit-linear-gradient(

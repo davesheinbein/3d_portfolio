@@ -230,22 +230,51 @@ const testimonials = [
 	},
 ];
 
+// red-text-gradient
+// orange-text-gradient
+// yellow-text-gradient
+// green-text-gradient
+// blue-text-gradient
+// pink-text-gradient
+// violet-text-gradient
+
 const projects = [
 	{
 		name: 'COVID Tracker',
 		source_code_link:
 			'https://github.com/davesheinbein/covid-tracker',
 		tags: [
-			{ name: 'React', color: 'blue-text-gradient' },
-			{ name: 'JavaScript', color: 'blue-text-gradient' },
-			{ name: 'Node.js', color: 'blue-text-gradient' },
-			{ name: 'Firebase', color: 'blue-text-gradient' },
-			{ name: 'CSS', color: 'blue-text-gradient' },
-			{ name: 'HTML5', color: 'blue-text-gradient' },
-			{ name: 'Chart.js', color: 'blue-text-gradient' },
+			{ id: 1, name: 'React', color: 'blue-text-gradient' },
 			{
+				id: 2,
+				name: 'JavaScript',
+				color: 'orange-text-gradient',
+			},
+			{
+				id: 3,
+				name: 'Node.js',
+				color: 'yellow-text-gradient',
+			},
+			{
+				id: 4,
+				name: 'Firebase',
+				color: 'red-text-gradient',
+			},
+			{ id: 5, name: 'CSS', color: 'blue-text-gradient' },
+			{
+				id: 6,
+				name: 'HTML5',
+				color: 'violet-text-gradient',
+			},
+			{
+				id: 7,
+				name: 'Chart.js',
+				color: 'pink-text-gradient',
+			},
+			{
+				id: 8,
 				name: 'React-leaflet',
-				color: 'blue-text-gradient',
+				color: 'green-text-gradient',
 			},
 		],
 		description:
@@ -259,16 +288,34 @@ const projects = [
 		source_code_link:
 			'https://github.com/davesheinbein/netflix-clone-ds',
 		tags: [
-			{ name: 'React', color: 'green-text-gradient' },
-			{ name: 'CSS', color: 'green-text-gradient' },
-			{ name: 'HTML5', color: 'green-text-gradient' },
-			{ name: 'Firebase', color: 'green-text-gradient' },
-			{ name: 'axios', color: 'green-text-gradient' },
 			{
-				name: 'movie-trailer',
-				color: 'green-text-gradient',
+				id: 1,
+				name: 'React',
+				color: 'blue-text-gradient',
+			},
+			{ id: 2, name: 'CSS', color: 'blue-text-gradient' },
+			{
+				id: 3,
+				name: 'HTML5',
+				color: 'violet-text-gradient',
 			},
 			{
+				id: 4,
+				name: 'Firebase',
+				color: 'red-text-gradient',
+			},
+			{
+				id: 5,
+				name: 'axios',
+				color: 'pink-text-gradient',
+			},
+			{
+				id: 6,
+				name: 'movie-trailer',
+				color: 'yellow-text-gradient',
+			},
+			{
+				id: 7,
 				name: 'react-youtube',
 				color: 'green-text-gradient',
 			},
@@ -284,14 +331,27 @@ const projects = [
 		source_code_link:
 			'https://github.com/davesheinbein/react-quiz-typescript',
 		tags: [
-			{ name: 'HTML5', color: 'pink-text-gradient' },
-			{ name: 'CSS', color: 'pink-text-gradient' },
-			{ name: 'React', color: 'pink-text-gradient' },
-			{ name: 'TypeScript', color: 'pink-text-gradient' },
-			{ name: 'API usage', color: 'pink-text-gradient' },
 			{
-				name: 'Styled-Components',
+				id: 1,
+				name: 'HTML5',
+				color: 'violet-text-gradient',
+			},
+			{ id: 2, name: 'CSS', color: 'blue-text-gradient' },
+			{ id: 3, name: 'React', color: 'blue-text-gradient' },
+			{
+				id: 4,
+				name: 'TypeScript',
+				color: 'orange-text-gradient',
+			},
+			{
+				id: 5,
+				name: 'API usage',
 				color: 'pink-text-gradient',
+			},
+			{
+				id: 6,
+				name: 'Styled-Components',
+				color: 'red-text-gradient',
 			},
 		],
 		description:
@@ -306,30 +366,73 @@ const projects = [
 		source_code_link:
 			'https://github.com/davesheinbein/fun-functionalities',
 		tags: [
-			{ name: 'React', color: 'orange-text-gradient' },
-			{ name: 'CSS', color: 'orange-text-gradient' },
-			{ name: 'HTML5', color: 'orange-text-gradient' },
-			{ name: 'JavaScript', color: 'orange-text-gradient' },
-			{ name: 'Framer', color: 'orange-text-gradient' },
 			{
+				id: 1,
+				name: 'React',
+				color: 'blue-text-gradient',
+			},
+			{ id: 2, name: 'CSS', color: 'blue-text-gradient' },
+			{
+				id: 3,
+				name: 'HTML5',
+				color: 'violet-text-gradient',
+			},
+			{
+				id: 4,
+				name: 'JavaScript',
+				color: 'orange-text-gradient',
+			},
+			{
+				id: 5,
+				name: 'Framer',
+				color: 'blue-text-gradient',
+			},
+			{
+				id: 6,
 				name: 'React-spring',
-				color: 'orange-text-gradient',
+				color: 'pink-text-gradient',
 			},
 			{
+				id: 7,
 				name: 'React-Chatbot-Kit',
-				color: 'orange-text-gradient',
+				color: 'green-text-gradient',
 			},
 			{
+				id: 8,
 				name: 'React-Motion',
-				color: 'orange-text-gradient',
+				color: 'yellow-text-gradient',
 			},
-			{ name: 'D3', color: 'orange-text-gradient' },
-			{ name: 'Mongoose', color: 'orange-text-gradient' },
-			{ name: 'Cors', color: 'orange-text-gradient' },
-			{ name: 'Node.js', color: 'orange-text-gradient' },
-			{ name: 'Heroku', color: 'orange-text-gradient' },
-			{ name: 'Firebase', color: 'orange-text-gradient' },
-			{ name: 'Git', color: 'orange-text-gradient' },
+			{ id: 9, name: 'D3', color: 'orange-text-gradient' },
+			{
+				id: 10,
+				name: 'Mongoose',
+				color: 'green-text-gradient',
+			},
+			{
+				id: 11,
+				name: 'Cors',
+				color: 'red-text-gradient',
+			},
+			{
+				id: 12,
+				name: 'Node.js',
+				color: 'yellow-text-gradient',
+			},
+			{
+				id: 13,
+				name: 'Heroku',
+				color: 'violet-text-gradient',
+			},
+			{
+				id: 14,
+				name: 'Firebase',
+				color: 'red-text-gradient',
+			},
+			{
+				id: 15,
+				name: 'Git',
+				color: 'yellow-text-gradient',
+			},
 		],
 		description:
 			'An application that showcases various functionalities using various technologies.',
@@ -342,11 +445,31 @@ const projects = [
 		source_code_link:
 			'https://github.com/davesheinbein/mock-twitch-ui',
 		tags: [
-			'React',
-			'CSS',
-			'HTML5',
-			'JavaScript',
-			'Firebase',
+			{
+				id: 1,
+				name: 'React',
+				color: 'blue-text-gradient',
+			},
+			{
+				id: 2,
+				name: 'CSS',
+				color: 'blue-text-gradient',
+			},
+			{
+				id: 3,
+				name: 'HTML5',
+				color: 'violet-text-gradient',
+			},
+			{
+				id: 4,
+				name: 'JavaScript',
+				color: 'orange-text-gradient',
+			},
+			{
+				id: 5,
+				name: 'Firebase',
+				color: 'red-text-gradient',
+			},
 		],
 		description:
 			'Designed and developed a high-fidelity mock front-end user interface for Twitch using React, CSS, and HTML5. The project leveraged Firebase to store and retrieve data.',
@@ -359,17 +482,31 @@ const projects = [
 		source_code_link:
 			'https://github.com/davesheinbein/amazon-clone-ds',
 		tags: [
-			{ name: 'React', color: 'red-text-gradient' },
-			{ name: 'Redux', color: 'red-text-gradient' },
-			{ name: 'SASS', color: 'red-text-gradient' },
-			{ name: 'Stripe', color: 'red-text-gradient' },
-			{ name: 'Firebase', color: 'red-text-gradient' },
-			{ name: 'Axios', color: 'red-text-gradient' },
+			{ id: 1, name: 'React', color: 'blue-text-gradient' },
 			{
+				id: 2,
+				name: 'Redux',
+				color: 'violet-text-gradient',
+			},
+			{ id: 3, name: 'SASS', color: 'pink-text-gradient' },
+			{
+				id: 4,
+				name: 'Stripe',
+				color: 'blue-text-gradient',
+			},
+			{
+				id: 5,
+				name: 'Firebase',
+				color: 'red-text-gradient',
+			},
+			{ id: 6, name: 'Axios', color: 'pink-text-gradient' },
+			{
+				id: 7,
 				name: 'Firebase database',
 				color: 'red-text-gradient',
 			},
 			{
+				id: 8,
 				name: 'Firebase authentication',
 				color: 'red-text-gradient',
 			},
@@ -385,13 +522,41 @@ const projects = [
 		source_code_link:
 			'https://github.com/davesheinbein/healthy-template',
 		tags: [
-			{ name: 'HTML5', color: 'red-text-gradient' },
-			{ name: 'CSS', color: 'red-text-gradient' },
-			{ name: 'JavaScript', color: 'red-text-gradient' },
-			{ name: 'Stripe', color: 'red-text-gradient' },
-			{ name: 'Context API', color: 'red-text-gradient' },
-			{ name: 'Node.js', color: 'red-text-gradient' },
-			{ name: 'Firebase', color: 'red-text-gradient' },
+			{
+				id: 1,
+				name: 'HTML5',
+				color: 'violet-text-gradient',
+			},
+			{
+				id: 2,
+				name: 'CSS',
+				color: 'blue-text-gradient',
+			},
+			{
+				id: 3,
+				name: 'JavaScript',
+				color: 'orange-text-gradient',
+			},
+			{
+				id: 4,
+				name: 'Stripe',
+				color: 'blue-text-gradient',
+			},
+			{
+				id: 5,
+				name: 'Context API',
+				color: 'red-text-gradient',
+			},
+			{
+				id: 6,
+				name: 'Node.js',
+				color: 'yellow-text-gradient',
+			},
+			{
+				id: 7,
+				name: 'Firebase',
+				color: 'red-text-gradient',
+			},
 		],
 		description:
 			'A business website for a healthy food restaurant with shopping cart and payment functionality.',
@@ -404,11 +569,31 @@ const projects = [
 		source_code_link:
 			'https://github.com/davesheinbein/mountain-template',
 		tags: [
-			'HTML5',
-			'CSS',
-			'JavaScript',
-			'Node.js',
-			'Firebase',
+			{
+				id: 1,
+				name: 'React',
+				color: 'red-text-gradient',
+			},
+			{
+				id: 2,
+				name: 'CSS',
+				color: 'blue-text-gradient',
+			},
+			{
+				id: 3,
+				name: 'HTML5',
+				color: 'violet-text-gradient',
+			},
+			{
+				id: 4,
+				name: 'JavaScript',
+				color: 'orange-text-gradient',
+			},
+			{
+				id: 5,
+				name: 'Firebase',
+				color: 'red-text-gradient',
+			},
 		],
 		description:
 			'A business website for Los Angeles mountains.',
@@ -421,14 +606,38 @@ const projects = [
 		source_code_link:
 			'https://github.com/davesheinbein/single-page-template',
 		tags: [
-			{ name: 'HTML5', color: 'yellow-text-gradient' },
-			{ name: 'CSS', color: 'yellow-text-gradient' },
-			{ name: 'SASS', color: 'yellow-text-gradient' },
-			{ name: 'JavaScript', color: 'yellow-text-gradient' },
-			{ name: 'Node.js', color: 'yellow-text-gradient' },
-			{ name: 'Firebase', color: 'yellow-text-gradient' },
-			{ name: 'Git', color: 'yellow-text-gradient' },
-			{ name: 'Github', color: 'yellow-text-gradient' },
+			{
+				id: 1,
+				name: 'HTML5',
+				color: 'violet-text-gradient',
+			},
+			{ id: 2, name: 'CSS', color: 'blue-text-gradient' },
+			{
+				id: 3,
+				name: 'SASS',
+				color: 'pink-text-gradient',
+			},
+			{
+				id: 4,
+				name: 'JavaScript',
+				color: 'orange-text-gradient',
+			},
+			{
+				id: 5,
+				name: 'Node.js',
+				color: 'yellow-text-gradient',
+			},
+			{
+				id: 6,
+				name: 'Firebase',
+				color: 'red-text-gradient',
+			},
+			{ id: 7, name: 'Git', color: 'yellow-text-gradient' },
+			{
+				id: 8,
+				name: 'Github',
+				color: 'yellow-text-gradient',
+			},
 		],
 		description:
 			'Developed a customizable and responsive single-page business website template for Los Angeles mountains using HTML5, CSS, SASS, and JavaScript. The template is easy to modify and includes features such as a responsive navigation menu, image carousel, and contact form. The project was built using Node.js and deployed on Firebase. Git and Github were used for version control and collaboration.',
@@ -443,7 +652,33 @@ const projects = [
 			'SVG animation using CSS. Can be applied to any image or SVG.',
 		source_code_link:
 			'https://github.com/davesheinbein/svg-animation',
-		tags: ['HTML5', 'CSS', 'Git', 'Github', 'GithubPages'],
+		tags: [
+			{
+				id: 1,
+				name: 'HTML5',
+				color: 'violet-text-gradient',
+			},
+			{
+				id: 2,
+				name: 'CSS',
+				color: 'blue-text-gradient',
+			},
+			{
+				id: 3,
+				name: 'Git',
+				color: 'yellow-text-gradient',
+			},
+			{
+				id: 4,
+				name: 'Github',
+				color: 'yellow-text-gradient',
+			},
+			{
+				id: 5,
+				name: 'GithubPages',
+				color: 'green-text-gradient',
+			},
+		],
 		live_link:
 			'https://davesheinbein.github.io/svg-animation/',
 		image:
@@ -454,32 +689,75 @@ const projects = [
 		description:
 			'A website that showcases RESTful routes, CRUD functionality, and JWT login. Functions as a peer to peer marketplace and message board for horse sellers and buyers.',
 		tags: [
-			{ name: 'HTML5', color: 'green-text-gradient' },
-			{ name: 'CSS', color: 'green-text-gradient' },
-			{ name: 'JavaScript', color: 'green-text-gradient' },
-			{ name: 'Mongoose', color: 'green-text-gradient' },
-			{ name: 'MongoDB', color: 'green-text-gradient' },
 			{
+				id: 1,
+				name: 'HTML5',
+				color: 'violet-text-gradient',
+			},
+			{
+				id: 2,
+				name: 'CSS',
+				color: 'blue-text-gradient',
+			},
+			{
+				id: 3,
+				name: 'JavaScript',
+				color: 'orange-text-gradient',
+			},
+			{
+				id: 4,
+				name: 'Mongoose',
+				color: 'green-text-gradient',
+			},
+			{
+				id: 5,
+				name: 'MongoDB',
+				color: 'orange-text-gradient',
+			},
+			{
+				id: 6,
 				name: 'MongoDB Atlas',
+				color: 'yellow-text-gradient',
+			},
+			{
+				id: 7,
+				name: 'Node.js',
+				color: 'yellow-text-gradient',
+			},
+			{
+				id: 8,
+				name: 'Express',
 				color: 'green-text-gradient',
 			},
-			{ name: 'Node.js', color: 'green-text-gradient' },
-			{ name: 'Express', color: 'green-text-gradient' },
-			{ name: 'React', color: 'green-text-gradient' },
 			{
+				id: 9,
+				name: 'React',
+				color: 'blue-text-gradient',
+			},
+			{
+				id: 10,
 				name: 'Google Fonts',
+				color: 'yellow-text-gradient',
+			},
+			{
+				id: 11,
+				name: 'Font Awesome',
+				color: 'orange-text-gradient',
+			},
+			{
+				id: 12,
+				name: 'Postman',
 				color: 'green-text-gradient',
 			},
 			{
-				name: 'Font Awesome',
-				color: 'green-text-gradient',
+				id: 13,
+				name: 'Heroku',
+				color: 'violet-text-gradient',
 			},
-			{ name: 'Postman', color: 'green-text-gradient' },
-			{ name: 'Heroku', color: 'green-text-gradient' },
 		],
 		github_link:
 			'https://github.com/davesheinbein/steed-finder-horse-bulliten-board',
-		live_link: 'No longer active',
+		live_link: '',
 		image:
 			'https://source.unsplash.com/random/1920x1080/?horses',
 	},
@@ -488,27 +766,61 @@ const projects = [
 		description:
 			'A website where people can post gifs or videos and add comments and ratings. Allows users to favorite and remove creatives from favorites.',
 		tags: [
-			{ name: 'HTML5', color: 'green-text-gradient' },
-			{ name: 'CSS', color: 'green-text-gradient' },
-			{ name: 'JavaScript', color: 'green-text-gradient' },
-			{ name: 'Mongoose', color: 'green-text-gradient' },
-			{ name: 'MongoDB', color: 'green-text-gradient' },
 			{
-				name: 'MongoDB Atlas',
+				id: 1,
+				name: 'HTML5',
+				color: 'violet-text-gradient',
+			},
+			{ id: 2, name: 'CSS', color: 'blue-text-gradient' },
+			{
+				id: 3,
+				name: 'JavaScript',
+				color: 'orange-text-gradient',
+			},
+			{
+				id: 4,
+				name: 'Mongoose',
 				color: 'green-text-gradient',
 			},
-			{ name: 'Node.js', color: 'green-text-gradient' },
-			{ name: 'Express', color: 'green-text-gradient' },
-			{ name: 'Postman', color: 'green-text-gradient' },
-			{ name: 'Heroku', color: 'green-text-gradient' },
 			{
-				name: 'Google Fonts',
+				id: 5,
+				name: 'MongoDB',
+				color: 'orange-text-gradient',
+			},
+			{
+				id: 6,
+				name: 'MongoDB Atlas',
+				color: 'yellow-text-gradient',
+			},
+			{
+				id: 7,
+				name: 'Node.js',
+				color: 'yellow-text-gradient',
+			},
+			{
+				id: 8,
+				name: 'Express',
 				color: 'green-text-gradient',
+			},
+			{
+				id: 9,
+				name: 'Postman',
+				color: 'green-text-gradient',
+			},
+			{
+				id: 10,
+				name: 'Heroku',
+				color: 'violet-text-gradient',
+			},
+			{
+				id: 11,
+				name: 'Google Fonts',
+				color: 'yellow-text-gradient',
 			},
 		],
 		source_code_link:
 			'https://github.com/davesheinbein/inspirations',
-		live_link: 'No longer active',
+		live_link: '',
 		image:
 			'https://source.unsplash.com/random/1920x1080/?inspired',
 	},
@@ -517,27 +829,65 @@ const projects = [
 		description:
 			'A gaming website where people can find information and post reviews about the latest games. Utilizes an API to access current information about games.',
 		tags: [
-			{ name: 'HTML5', color: 'orange-text-gradient' },
-			{ name: 'CSS', color: 'orange-text-gradient' },
-			{ name: 'JavaScript', color: 'orange-text-gradient' },
-			{ name: 'Python3', color: 'orange-text-gradient' },
-			{ name: 'Django', color: 'orange-text-gradient' },
-			{ name: 'PostgreSQL', color: 'orange-text-gradient' },
-			{ name: 'GitHub', color: 'orange-text-gradient' },
-			{ name: 'Heroku', color: 'orange-text-gradient' },
 			{
+				id: 1,
+				name: 'HTML5',
+				color: 'violet-text-gradient',
+			},
+			{
+				id: 2,
+				name: 'CSS',
+				color: 'blue-text-gradient',
+			},
+			{
+				id: 3,
+				name: 'JavaScript',
+				color: 'orange-text-gradient',
+			},
+			{
+				id: 4,
+				name: 'Python3',
+				color: 'orange-text-gradient',
+			},
+			{
+				id: 5,
+				name: 'Django',
+				color: 'orange-text-gradient',
+			},
+			{
+				id: 6,
+				name: 'PostgreSQL',
+				color: 'orange-text-gradient',
+			},
+			{
+				id: 7,
+				name: 'GitHub',
+				color: 'yellow-text-gradient',
+			},
+			{
+				id: 8,
+				name: 'Heroku',
+				color: 'violet-text-gradient',
+			},
+			{
+				id: 9,
 				name: 'Materialize',
 				color: 'orange-text-gradient',
 			},
-			{ name: 'AWS', color: 'orange-text-gradient' },
 			{
-				name: 'Google Fonts',
+				id: 10,
+				name: 'AWS',
 				color: 'orange-text-gradient',
+			},
+			{
+				id: 11,
+				name: 'Google Fonts',
+				color: 'yellow-text-gradient',
 			},
 		],
 		source_code_link:
 			'https://github.com/davesheinbein/TwistsOfRate',
-		live_link: 'No longer active',
+		live_link: '',
 		image:
 			'https://source.unsplash.com/random/1920x1080/?gaming',
 	},
@@ -546,12 +896,36 @@ const projects = [
 		description:
 			"A game where players turn up cards and the player with the higher card takes both cards and puts them face down on their stack. If the cards are the same rank, it's War.",
 		tags: [
-			'HTML5',
-			'CSS',
-			'JavaScript',
-			'Git',
-			'Github',
-			'Github Pages',
+			{
+				id: 1,
+				name: 'HTML5',
+				color: 'violet-text-gradient',
+			},
+			{
+				id: 2,
+				name: 'CSS',
+				color: 'blue-text-gradient',
+			},
+			{
+				id: 3,
+				name: 'JavaScript',
+				color: 'orange-text-gradient',
+			},
+			{
+				id: 4,
+				name: 'Git',
+				color: 'yellow-text-gradient',
+			},
+			{
+				id: 5,
+				name: 'Github',
+				color: 'yellow-text-gradient',
+			},
+			{
+				id: 6,
+				name: 'Github Pages',
+				color: 'orange-text-gradient',
+			},
 		],
 		source_code_link:
 			'https://github.com/davesheinbein/War-game',

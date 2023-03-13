@@ -10,15 +10,16 @@ import * as d3 from 'd3';
 import cloud from 'd3-cloud';
 import { skillsData } from '../constants';
 import { motion } from 'framer-motion';
-import { textVariant } from '../utils/motion';
+import { fadeIn, textVariant } from '../utils/motion';
 import CanvasLoader from './Loader';
 import { debounce } from 'lodash';
+import { SectionWrapper } from '../hoc';
 
 // Define a React component for the WordCloud
 const WordCloud = () => {
 	// add skillsData to state
 	const [data, setData] = useState(skillsData);
-	console.log('🚀 ~ data:', data);
+	// console.log('🚀 ~ data:', data);
 	// Create a reference to the SVG and text elements
 	const svgRef = useRef(null);
 	const textRef = useRef(null);
@@ -30,8 +31,8 @@ const WordCloud = () => {
 
 		// Return a function that takes in a word and event as arguments
 		return function (word, event) {
-			console.log('🚀 ~ word:', word);
-			console.log('🚀 ~ event:', event);
+			// console.log('🚀 ~ word:', word);
+			// console.log('🚀 ~ event:', event);
 			// Get the element that triggered the event
 			const element = event.target;
 			// Select the text element with D3
@@ -191,8 +192,8 @@ const WordCloud = () => {
 						event.preventDefault();
 						// Call the getCallback function with the word's description and event as arguments.
 						getCallback((d) => {
-							console.log('d', d);
-							console.log('d.description', d.description);
+							// console.log('d', d);
+							// console.log('d.description', d.description);
 							return d.description;
 						})(d, event);
 					})
@@ -284,8 +285,8 @@ const WordCloud = () => {
 							event.preventDefault();
 							// Call the function that was passed to the component
 							getCallback((d) => {
-								console.log('d', d);
-								console.log('d.description', d.description);
+								// console.log('d', d);
+								// console.log('d.description', d.description);
 								return d.description;
 							})(d, event);
 						})
@@ -333,17 +334,21 @@ const WordCloud = () => {
 	}, [handleResize]);
 
 	return (
-		<Suspense fallback={<CanvasLoader />}>
-			<motion.div variants={textVariant()}>
-				<svg
-					ref={svgRef}
-					className='w-full sm:h-96 h-60 select-none'
-				>
-					<g />
-				</svg>
-			</motion.div>
-		</Suspense>
+		<motion.div
+			variants={fadeIn('left', 'spring', 1, 0.75)}
+		>
+			<Suspense fallback={<CanvasLoader />}>
+				<motion.div variants={textVariant()}>
+					<svg
+						ref={svgRef}
+						className='w-full sm:h-96 h-60 select-none'
+					>
+						<g />
+					</svg>
+				</motion.div>
+			</Suspense>
+		</motion.div>
 	);
 };
 
-export default WordCloud;
+export default SectionWrapper(WordCloud, 'Cloud');

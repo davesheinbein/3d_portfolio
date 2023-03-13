@@ -1,4 +1,9 @@
-import React, { Suspense, lazy } from 'react';
+import React, {
+	Suspense,
+	lazy,
+	useState,
+	useEffect,
+} from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { StarsCanvas } from './components';
 import CanvasLoader from './components/Loader';
@@ -16,6 +21,9 @@ const LazyWorks = lazy(() => import('./components/Works'));
 const LazyWordCloud = lazy(() =>
 	import('./components/WordCloud')
 );
+const LazyDivider = lazy(() =>
+	import('./components/Divider')
+);
 const LazyFeedbacks = lazy(() =>
 	import('./components/Feedbacks')
 );
@@ -27,40 +35,68 @@ const LazyStarsCanvas = lazy(() =>
 );
 
 function App() {
+	const [isMobile, setIsMobile] = useState(false);
+
+	useEffect(() => {
+		const mediaQuery = window.matchMedia(
+			'(max-width: 500px)'
+		);
+
+		setIsMobile(mediaQuery.matches);
+
+		const handleMediaQueryChange = (event) => {
+			setIsMobile(event.matches);
+		};
+
+		mediaQuery.addEventListener(
+			'change',
+			handleMediaQueryChange
+		);
+
+		return () => {
+			mediaQuery.removeEventListener(
+				'change',
+				handleMediaQueryChange
+			);
+		};
+	}, []);
 	return (
 		<BrowserRouter>
 			<div className='relative z-0 bg-primary'>
 				<div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'></div>
 				<Suspense fallback={<div>Loading...</div>}>
-					<LazyNavbar />
+					<LazyNavbar isMobile={isMobile} />
 				</Suspense>
 				<Suspense fallback={<div>Loading...</div>}>
-					<LazyHero />
+					<LazyHero isMobile={isMobile} />
 				</Suspense>
 			</div>
 			<Suspense fallback={<div>Loading...</div>}>
-				<LazyAbout />
+				<LazyAbout isMobile={isMobile} />
 			</Suspense>
 			<Suspense fallback={<div>Loading...</div>}>
-				<LazyExperience />
+				<LazyExperience isMobile={isMobile} />
 			</Suspense>
 			<Suspense fallback={<div>Loading...</div>}>
-				<LazyTech />
+				<LazyTech isMobile={isMobile} />
 			</Suspense>
 			<Suspense fallback={<div>Loading...</div>}>
-				<LazyWorks />
+				<LazyWorks isMobile={isMobile} />
 			</Suspense>
 			<Suspense fallback={<div>Loading...</div>}>
-				<LazyWordCloud />
+				<LazyWordCloud isMobile={isMobile} />
+			</Suspense>
+			<Suspense fallback={<div>Loading...</div>}>
+				<LazyDivider isMobile={isMobile} />
 			</Suspense>
 			<LazyFeedbacks />
 			<div className='relative z-0'>
 				<Suspense fallback={<div>Loading...</div>}>
-					<LazyContact />
+					<LazyContact isMobile={isMobile} />
 				</Suspense>
 				<Suspense fallback={<div>Loading...</div>}>
-					{/* <LazyStarsCanvas /> */}
-					<StarsCanvas />
+					{/* <LazyStarsCanvas isMobile={isMobile} /> */}
+					<StarsCanvas isMobile={isMobile} />
 				</Suspense>
 			</div>
 		</BrowserRouter>
