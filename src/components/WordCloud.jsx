@@ -340,8 +340,8 @@ const WordCloud = ({ isMobile }) => {
 			className={`relative w-full h-96 mx-auto`}
 		>
 			<Suspense fallback={<CanvasLoader />}>
-				<motion.div className='absolute top-0 left-0 w-full sm:h-96 h-60'>
-					<AnimatedCanvas
+				<motion.div className='absolute top-0 left-0 w-full sm:h-96 h-60 z-[20]'>
+					{/* <AnimatedCanvas
 						isMobile={isMobile}
 						gltfPath={'./fish/scene.gltf'}
 						cameraPosition={[15, 20, 0]}
@@ -349,15 +349,43 @@ const WordCloud = ({ isMobile }) => {
 						gltfObjectPosition={[0, -0.75, 0]}
 						gltfObjectRotation={[-0.1, 2.2, 0.1]}
 						gltfObjectScale={[1, 1, 1]}
-					/>
+						autoRotate={true}
+						isHovered={true}
+					/> */}
+					{/* <AnimatedCanvas
+						isMobile={isMobile}
+						gltfPath={'./jellyfish/scene.gltf'}
+						cameraPosition={[0, 0, 0]}
+						cameraFov={35}
+						gltfObjectPosition={[0, -5.25, -25.5]}
+						gltfObjectRotation={[0, 40, 0]}
+						gltfObjectScale={[0.025, 0.025, 0.025]}
+						autoRotate={true}
+						isHovered={true}
+					/> */}
 				</motion.div>
-				<motion.div variants={textVariant()}>
+				<motion.div
+					variants={textVariant()}
+					className='z-[10]'
+				>
 					<svg
 						ref={svgRef}
-						className='w-full sm:h-96 h-60 select-none'
+						className='w-full sm:h-96 h-60 select-none '
 					>
 						<g />
 					</svg>
+				</motion.div>
+				<motion.div className='absolute top-0 left-0 w-full sm:h-96 h-60 z-[-10]'>
+					<AnimatedCanvas
+						isMobile={isMobile}
+						gltfPath={'./cloud/scene.gltf'}
+						cameraPosition={[0, 0, 0]}
+						cameraFov={11}
+						gltfObjectPosition={[0, -0.75, -20.5]}
+						gltfObjectRotation={[0, 0, 0]}
+						gltfObjectScale={[0.8, 0.8, 0.8]}
+						autoRotate={true}
+					/>
 				</motion.div>
 			</Suspense>
 		</motion.div>

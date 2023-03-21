@@ -49,9 +49,9 @@ const Navbar = () => {
 					/>
 					<p className="text-white text-[18px] font-bold cursor-pointer flex font-['Pacifico'] select-none">
 						David Sheinbein &nbsp;
-						<span className="sm:block hidden font-['Pacifico']">
+						<span className="hidden sm:block font-['Pacifico'] hover:block">
 							{' '}
-							| Software Engineer
+							~ Software Engineer
 						</span>
 					</p>
 				</Link>

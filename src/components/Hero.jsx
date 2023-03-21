@@ -6,14 +6,14 @@ const Hero = ({ isMobile }) => {
 	return (
 		<section className={`relative w-full h-screen mx-auto`}>
 			<div
-				className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+				className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 z-100`}
 			>
 				<div className='flex flex-col justify-center items-center mt-5'>
 					<div className='w-5 h-5 rounded-full bg-[#2f80ed]' />
 					<div className='w-1 sm:h-96 h-60 blue-gradient' />
 				</div>
 
-				<div>
+				<div className=''>
 					<h1
 						className={`${styles.heroHeadText} text-white`}
 					>
@@ -44,12 +44,14 @@ const Hero = ({ isMobile }) => {
 				</div>
 			</div>
 
-			<AnimatedCanvas
-				isMobile={isMobile}
-				gltfPath={'./desktop_pc/scene.gltf'}
-				cameraPosition={[20, 3, 5]}
-				cameraFov={25}
-			/>
+			<span className=''>
+				<AnimatedCanvas
+					isMobile={isMobile}
+					gltfPath={'./desktop_pc/scene.gltf'}
+					cameraPosition={[20, 3, 5]}
+					cameraFov={25}
+				/>
+			</span>
 
 			<div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
 				<a href='#about'>

@@ -20,34 +20,55 @@ const Animated = ({
 	position,
 	rotation,
 	scale,
+	isHovered = false,
 }) => {
 	const animatedRef = useRef();
+	const mouseRef = useRef({ x: 0, y: 0 });
 	const gltfObject = useGLTF(gltfPath);
 	const { animations } = useGLTF(gltfPath);
 	const { actions } = useAnimations(
 		animations,
 		animatedRef
 	);
-	// const [rotationAngle, setRotationAngle] = useState(0);
+	const [hovered, setHovered] = useState(false);
 
 	useFrame((state, delta) => {
-		if (animatedRef.current) {
-			if (!!actions.Animation) {
-				actions.Animation.play();
-				actions.Animation.setLoop(THREE.LoopRepeat);
-			}
-		}
+		const mouse = state.mouse;
+		mouseRef.current = mouse;
 	});
 
 	useLayoutEffect(() => {
+		let animationFrameId;
+
 		if (!!actions.Animation) {
 			actions.Animation.play();
 			actions.Animation.setLoop(THREE.LoopRepeat);
 		}
-	}, [actions.Animation]);
+
+		const updatePosition = () => {
+			if (
+				!!isHovered &&
+				!!mouseRef.current.x &&
+				!!mouseRef.current.y
+			) {
+				animatedRef.current.position.x = mouseRef.current.x;
+				animatedRef.current.position.y = mouseRef.current.y;
+			}
+			animationFrameId =
+				requestAnimationFrame(updatePosition);
+		};
+
+		updatePosition();
+
+		return () => cancelAnimationFrame(animationFrameId);
+	}, [actions.Animation, hovered, isHovered]);
 
 	return (
-		<group ref={animatedRef}>
+		<group
+			ref={animatedRef}
+			onPointerOver={() => setHovered(true)}
+			onPointerOut={() => setHovered(false)}
+		>
 			<mesh>
 				<hemisphereLight
 					intensity={0.15}
@@ -84,6 +105,7 @@ const AnimatedCanvas = ({
 	gltfObjectRotation = [-0.01, -0.2, -0.1],
 	gltfObjectScale = isMobile ? 0.7 : 0.75,
 	autoRotate = false,
+	isHovered = false,
 }) => {
 	return (
 		<Canvas
@@ -93,9 +115,6 @@ const AnimatedCanvas = ({
 			camera={{ position: cameraPosition, fov: cameraFov }}
 			gl={{ preserveDrawingBuffer: true }}
 			className='w-full h-full cursor-ew-resize'
-			onPlay={() => {
-				console.log('play');
-			}}
 		>
 			<Suspense fallback={<CanvasLoader />}>
 				<OrbitControls
@@ -109,7 +128,8 @@ const AnimatedCanvas = ({
 					position={gltfObjectPosition}
 					rotation={gltfObjectRotation}
 					scale={gltfObjectScale}
-					autoRotate={autoRotate}
+					// autoRotate={autoRotate}
+					isHovered={isHovered}
 				/>
 			</Suspense>
 

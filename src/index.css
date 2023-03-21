@@ -391,3 +391,40 @@ text {
 	font-size: 12px;
 	margin-bottom: 5px;
 }
+
+.blog-select-list-close {
+	display: none;
+	flex-direction: column;
+}
+
+.blog-select-list-open {
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	max-height: 300px;
+	overflow-y: scroll;
+	scrollbar-width: thin;
+	scrollbar-color: #555555 #ffffff;
+}
+
+.blog-select-list-open::-webkit-scrollbar {
+	width: 8px;
+}
+.blog-select-list-open::-webkit-scrollbar-track {
+	background: #ffffff;
+}
+.blog-select-list-open::-webkit-scrollbar-thumb {
+	background-color: #555555;
+	border-radius: 20px;
+	border: 2px solid #ffffff;
+}
+
+.activePost {
+	background-color: #f9826c;
+}
+
+.activePost:hover,
+.activePost:active {
+	background-color: #6c63ff;
+	color: #ffffff;
+}

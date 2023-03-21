@@ -5,8 +5,22 @@ import React, {
 	useEffect,
 } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { StarsCanvas } from './components';
-import CanvasLoader from './components/Loader';
+import { StarsCanvas, LazyLoader } from './components';
+import {
+	cat,
+	catDance,
+	goku,
+	jake,
+	bmo,
+	travolta,
+	duck,
+	dog,
+	sun,
+	skate,
+	pokemon,
+	thankyou,
+} from './assets';
+import Blog from './components/Blog';
 
 const LazyNavbar = lazy(() =>
 	import('./components/Navbar')
@@ -60,41 +74,58 @@ function App() {
 			);
 		};
 	}, []);
+	// <LazyLoader source={cat} />
+	// <LazyLoader source={goku} />
+	// <LazyLoader source={jake} />
+	// <LazyLoader source={bmo} />
+	// <LazyLoader source={travolta} />
+	// <LazyLoader source={duck} />
+	// <LazyLoader source={dog} />
+	// <LazyLoader source={skate} />
+	// <LazyLoader source={sun} />
+	// <LazyLoader source={catDance} />
+	// <LazyLoader source={pokemon} />
+	// <LazyLoader source={thankyou} />
 	return (
 		<BrowserRouter>
 			<div className='relative z-0 bg-primary'>
 				<div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'></div>
-				<Suspense fallback={<div>Loading...</div>}>
+				<Suspense fallback={<LazyLoader source={jake} />}>
 					<LazyNavbar isMobile={isMobile} />
 				</Suspense>
-				<Suspense fallback={<div>Loading...</div>}>
+				<Suspense fallback={<LazyLoader source={bmo} />}>
 					<LazyHero isMobile={isMobile} />
 				</Suspense>
 			</div>
-			<Suspense fallback={<div>Loading...</div>}>
+			<Suspense fallback={<LazyLoader source={cat} />}>
 				<LazyAbout isMobile={isMobile} />
 			</Suspense>
-			<Suspense fallback={<div>Loading...</div>}>
+			<Suspense fallback={<LazyLoader source={goku} />}>
 				<LazyExperience isMobile={isMobile} />
 			</Suspense>
-			<Suspense fallback={<div>Loading...</div>}>
+			<Suspense fallback={<LazyLoader source={travolta} />}>
 				<LazyTech isMobile={isMobile} />
 			</Suspense>
-			<Suspense fallback={<div>Loading...</div>}>
+			<Suspense fallback={<LazyLoader source={sun} />}>
 				<LazyWorks isMobile={isMobile} />
 			</Suspense>
-			<Suspense fallback={<div>Loading...</div>}>
+			<Suspense fallback={<LazyLoader source={duck} />}>
 				<LazyWordCloud isMobile={isMobile} />
 			</Suspense>
-			<Suspense fallback={<div>Loading...</div>}>
+			<Suspense fallback={<LazyLoader source={catDance} />}>
 				<LazyDivider isMobile={isMobile} />
 			</Suspense>
+			<Blog />
 			<LazyFeedbacks />
 			<div className='relative z-0'>
-				<Suspense fallback={<div>Loading...</div>}>
+				<Suspense
+					fallback={<LazyLoader source={thankyou} />}
+				>
 					<LazyContact isMobile={isMobile} />
 				</Suspense>
-				<Suspense fallback={<div>Loading...</div>}>
+				<Suspense
+					fallback={<LazyLoader source={pokemon} />}
+				>
 					{/* <LazyStarsCanvas isMobile={isMobile} /> */}
 					<StarsCanvas isMobile={isMobile} />
 				</Suspense>
