@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { blogData } from '../constants';
+import { SectionWrapper } from '../hoc';
 
 const ReadBtn = ({
 	toggleFullContent,
@@ -55,12 +56,12 @@ function Blog() {
 	};
 
 	return (
-		<div className='blog flex flex-col items-center'>
-			<div className='w-full mb-20'>
+		<div className='blog flex flex-col items-center w-full'>
+			<div className='w-full mb-10 rounded-md select-none'>
 				{selectedPost && (
 					<>
 						<label
-							className='block m-0 p-6 bg-gray-200 text-blue-500 font-small-caps cursor-pointer items-center text-center text-xl font-bold leading-tight'
+							className='block m-0 p-6 bg-gray-200 text-blue-500 font-small-caps cursor-pointer items-center text-center text-xl font-bold leading-tight rounded-tl-lg rounded-tr-lg'
 							onClick={() => setDropdownOpen(!dropdownOpen)}
 						>
 							<span>{selectedPost.title}</span>
@@ -75,7 +76,7 @@ function Blog() {
 						dropdownOpen
 							? 'blog-select-list-open'
 							: 'blog-select-list-close'
-					}`}
+					} rounded-bl-lg rounded-br-lg`}
 				>
 					{blogData.map((post) => (
 						<li
@@ -92,9 +93,9 @@ function Blog() {
 					))}
 				</ul>
 			</div>
-			<div className='blog-content mb-10 items-center text-center'>
+			<div className='blog-content mb-10 items-center text-center w-full mb-10 select-none'>
 				{selectedPost && (
-					<div className='mx-[100px] '>
+					<div className=''>
 						<h2 className='text-3xl font-bold text-blue-500 leading-tight'>
 							{selectedPost.title}
 						</h2>
@@ -103,7 +104,7 @@ function Blog() {
 							{selectedPost.date}
 						</h3>
 						<img
-							className='my-10 max-w-60 my-20 shadow-white'
+							className='my-10 max-w-60 my-20 shadow-md shadow-gray-50 rounded-md relative z-10 transform hover:transform-none transition-transform'
 							src={selectedPost.image}
 							alt={selectedPost.title}
 						/>
@@ -126,4 +127,4 @@ function Blog() {
 	);
 }
 
-export default Blog;
+export default SectionWrapper(Blog, 'blog');

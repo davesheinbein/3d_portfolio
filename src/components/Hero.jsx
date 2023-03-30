@@ -17,7 +17,7 @@ const Hero = ({ isMobile }) => {
 					<h1
 						className={`${styles.heroHeadText} text-white`}
 					>
-						Hi, I'm{' '}
+						Hello, I'm{' '}
 						<span className='text-[#2f80ed]'>
 							David Sheinbein
 						</span>

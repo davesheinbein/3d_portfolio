@@ -364,18 +364,20 @@ const WordCloud = ({ isMobile }) => {
 						isHovered={true}
 					/> */}
 				</motion.div>
-				<motion.div
+				{/* <motion.div
 					variants={textVariant()}
 					className='z-[10]'
-				>
+				> */}
+				<div className='z-[10]'>
 					<svg
 						ref={svgRef}
 						className='w-full sm:h-96 h-60 select-none '
 					>
 						<g />
 					</svg>
-				</motion.div>
-				<motion.div className='absolute top-0 left-0 w-full sm:h-96 h-60 z-[-10]'>
+				</div>
+				{/* </motion.div> */}
+				{/* <motion.div className='absolute top-0 left-0 w-full sm:h-96 h-60 z-[-10]'>
 					<AnimatedCanvas
 						isMobile={isMobile}
 						gltfPath={'./cloud/scene.gltf'}
@@ -386,7 +388,7 @@ const WordCloud = ({ isMobile }) => {
 						gltfObjectScale={[0.8, 0.8, 0.8]}
 						autoRotate={true}
 					/>
-				</motion.div>
+				</motion.div> */}
 			</Suspense>
 		</motion.div>
 	);

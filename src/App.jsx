@@ -88,7 +88,7 @@ function App() {
 	// <LazyLoader source={thankyou} />
 	return (
 		<BrowserRouter>
-			<div className='relative z-0 bg-primary'>
+			<div className='relative z-[100] bg-primary'>
 				<div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'></div>
 				<Suspense fallback={<LazyLoader source={jake} />}>
 					<LazyNavbar isMobile={isMobile} />
@@ -115,7 +115,9 @@ function App() {
 			<Suspense fallback={<LazyLoader source={catDance} />}>
 				<LazyDivider isMobile={isMobile} />
 			</Suspense>
-			<Blog />
+			<Suspense fallback={<LazyLoader source={skate} />}>
+				<Blog isMobile={isMobile} />
+			</Suspense>
 			<LazyFeedbacks />
 			<div className='relative z-0'>
 				<Suspense

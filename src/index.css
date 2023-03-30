@@ -410,9 +410,11 @@ text {
 .blog-select-list-open::-webkit-scrollbar {
 	width: 8px;
 }
+
 .blog-select-list-open::-webkit-scrollbar-track {
 	background: #ffffff;
 }
+
 .blog-select-list-open::-webkit-scrollbar-thumb {
 	background-color: #555555;
 	border-radius: 20px;

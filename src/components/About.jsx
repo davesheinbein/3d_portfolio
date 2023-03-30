@@ -69,7 +69,7 @@ const About = () => {
 				and large teams.
 				<br />
 				<br />
-				My passion for technology and my drive to
+				My interest for technology and my drive to
 				continuously improve my skills have enabled me to
 				quickly adapt to new technologies and software
 				development processes. I have a proven track record
