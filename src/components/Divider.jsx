@@ -3,7 +3,7 @@ import { styles } from '../styles';
 import { AnimatedCanvas } from './canvas';
 import { fadeIn } from '../utils/motion';
 
-const Divider = ({ isMobile }) => {
+const Divider = () => {
 	return (
 		<motion.div
 			className='relative w-full h-screen mx-auto flex flex-center'
@@ -19,15 +19,12 @@ const Divider = ({ isMobile }) => {
 				variants={fadeIn('right', 'spring', 1, 0.75)}
 			>
 				<AnimatedCanvas
-					isMobile={isMobile}
 					gltfPath={'./smol/scene.gltf'}
 					cameraPosition={[15, 20, 0]}
 					cameraFov={10}
 					gltfObjectPosition={[0, -0.75, 0]}
 					gltfObjectRotation={[-0.1, 2.2, 0.1]}
-					gltfObjectScale={
-						!isMobile ? (1, 1, 1) : (0.75, 0.75, 0.75)
-					}
+					gltfObjectScale={(1, 1, 1)}
 					autoRotate={true}
 				/>
 			</motion.div>

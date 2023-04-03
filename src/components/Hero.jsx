@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { AnimatedCanvas } from './canvas';
 
-const Hero = ({ isMobile }) => {
+const Hero = () => {
 	return (
 		<section className={`relative w-full h-screen mx-auto`}>
 			<div
@@ -46,7 +46,6 @@ const Hero = ({ isMobile }) => {
 
 			<span className=''>
 				<AnimatedCanvas
-					isMobile={isMobile}
 					gltfPath={'./desktop_pc/scene.gltf'}
 					cameraPosition={[20, 3, 5]}
 					cameraFov={25}

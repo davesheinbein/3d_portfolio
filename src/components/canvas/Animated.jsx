@@ -68,6 +68,7 @@ const Animated = ({
 			ref={animatedRef}
 			onPointerOver={() => setHovered(true)}
 			onPointerOut={() => setHovered(false)}
+			frustumCulled={true}
 		>
 			<mesh>
 				<hemisphereLight
@@ -98,12 +99,9 @@ const AnimatedCanvas = ({
 	gltfPath = './desktop_pc/scene.gltf',
 	cameraPosition = [20, 3, 5],
 	cameraFov = 25,
-	isMobile = false,
-	gltfObjectPosition = isMobile
-		? [0, -3, -2.2]
-		: [0, -3.25, -1.5],
+	gltfObjectPosition = [0, -3.25, -1.5],
 	gltfObjectRotation = [-0.01, -0.2, -0.1],
-	gltfObjectScale = isMobile ? 0.7 : 0.75,
+	gltfObjectScale = 0.75,
 	autoRotate = false,
 	isHovered = false,
 }) => {

@@ -1,11 +1,23 @@
-import React, {
-	Suspense,
-	lazy,
-	useState,
-	useEffect,
-} from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { StarsCanvas, LazyLoader } from './components';
+import {
+	Hero,
+	Navbar,
+	WordCloud,
+	About,
+	Tech,
+	Experience,
+	Blog,
+	Divider,
+	Works,
+	Feedbacks,
+	Contact,
+	EarthCanvas,
+	BallCanvas,
+	AnimatedCanvas,
+	StarsCanvas,
+	LazyLoader,
+} from './components';
 import {
 	cat,
 	catDance,
@@ -20,7 +32,6 @@ import {
 	pokemon,
 	thankyou,
 } from './assets';
-import Blog from './components/Blog';
 
 const LazyNavbar = lazy(() =>
 	import('./components/Navbar')
@@ -32,6 +43,7 @@ const LazyExperience = lazy(() =>
 );
 const LazyTech = lazy(() => import('./components/Tech'));
 const LazyWorks = lazy(() => import('./components/Works'));
+const LazyBlog = lazy(() => import('./components/Blog'));
 const LazyWordCloud = lazy(() =>
 	import('./components/WordCloud')
 );
@@ -49,88 +61,64 @@ const LazyStarsCanvas = lazy(() =>
 );
 
 function App() {
-	const [isMobile, setIsMobile] = useState(false);
-
-	useEffect(() => {
-		const mediaQuery = window.matchMedia(
-			'(max-width: 500px)'
-		);
-
-		setIsMobile(mediaQuery.matches);
-
-		const handleMediaQueryChange = (event) => {
-			setIsMobile(event.matches);
-		};
-
-		mediaQuery.addEventListener(
-			'change',
-			handleMediaQueryChange
-		);
-
-		return () => {
-			mediaQuery.removeEventListener(
-				'change',
-				handleMediaQueryChange
-			);
-		};
-	}, []);
-	// <LazyLoader source={cat} />
-	// <LazyLoader source={goku} />
-	// <LazyLoader source={jake} />
-	// <LazyLoader source={bmo} />
-	// <LazyLoader source={travolta} />
-	// <LazyLoader source={duck} />
-	// <LazyLoader source={dog} />
-	// <LazyLoader source={skate} />
-	// <LazyLoader source={sun} />
-	// <LazyLoader source={catDance} />
-	// <LazyLoader source={pokemon} />
-	// <LazyLoader source={thankyou} />
 	return (
 		<BrowserRouter>
 			<div className='relative z-[100] bg-primary'>
 				<div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'></div>
-				<Suspense fallback={<LazyLoader source={jake} />}>
-					<LazyNavbar isMobile={isMobile} />
+				<Navbar />
+				<Hero />
+				{/* <Suspense fallback={<LazyLoader source={jake} />}>
+					<LazyNavbar />
 				</Suspense>
 				<Suspense fallback={<LazyLoader source={bmo} />}>
-					<LazyHero isMobile={isMobile} />
-				</Suspense>
+					<LazyHero />
+				</Suspense> */}
 			</div>
-			<Suspense fallback={<LazyLoader source={cat} />}>
-				<LazyAbout isMobile={isMobile} />
+			<About />
+			<Experience />
+			<Tech />
+			<Works />
+			<WordCloud />
+			<Divider />
+			<Blog />
+			<Feedbacks />
+			{/* <Suspense fallback={<LazyLoader source={cat} />}>
+				<LazyAbout />
 			</Suspense>
 			<Suspense fallback={<LazyLoader source={goku} />}>
-				<LazyExperience isMobile={isMobile} />
+				<LazyExperience />
 			</Suspense>
 			<Suspense fallback={<LazyLoader source={travolta} />}>
-				<LazyTech isMobile={isMobile} />
+				<LazyTech />
 			</Suspense>
 			<Suspense fallback={<LazyLoader source={sun} />}>
-				<LazyWorks isMobile={isMobile} />
+				<LazyWorks />
 			</Suspense>
 			<Suspense fallback={<LazyLoader source={duck} />}>
-				<LazyWordCloud isMobile={isMobile} />
+				<LazyWordCloud />
 			</Suspense>
 			<Suspense fallback={<LazyLoader source={catDance} />}>
-				<LazyDivider isMobile={isMobile} />
+				<LazyDivider />
 			</Suspense>
 			<Suspense fallback={<LazyLoader source={skate} />}>
-				<Blog isMobile={isMobile} />
+				<LazyBlog />
 			</Suspense>
-			<LazyFeedbacks />
+			<Suspense fallback={<LazyLoader source={catDance} />}>
+				<LazyFeedbacks />
+			</Suspense> */}
 			<div className='relative z-0'>
-				<Suspense
+				<Contact />
+				{/* <StarsCanvas /> */}
+				{/* <Suspense
 					fallback={<LazyLoader source={thankyou} />}
 				>
-					<LazyContact isMobile={isMobile} />
+					<LazyContact />
 				</Suspense>
 				<Suspense
 					fallback={<LazyLoader source={pokemon} />}
 				>
-					{/* <LazyStarsCanvas isMobile={isMobile} /> */}
-					<StarsCanvas isMobile={isMobile} />
-				</Suspense>
+					<LazyStarsCanvas />
+				</Suspense> */}
 			</div>
 		</BrowserRouter>
 	);

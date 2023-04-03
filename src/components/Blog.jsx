@@ -36,8 +36,8 @@ function Blog() {
 		// );
 		// setSelectedPost(blogData[randomPostIndex]);
 
-		// sets this specific post
-		console.log('🚀 ~ blogData:', blogData);
+		// sets this specific post:
+		// Never Too Late to Start: My Journey from Marketer to Software Engineer
 		setSelectedPost(blogData[6]);
 	}, []);
 
